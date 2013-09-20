@@ -1,0 +1,12 @@
+{
+  "name": "rework-bootstrap",
+  "repo": "intesso/rework-bootstrap",
+  "version": "1.0.0",
+  "description": "Recursively walk through all rules and keyframes",
+  "keywords": ["css", "rework"],
+  "dependencies": {
+    "intesso/rework-walk": "*"
+  },
+  "license": "MIT",
+  "scripts": ["index.js"]
+}
