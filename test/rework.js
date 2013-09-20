@@ -6,7 +6,7 @@ var should = require('should');
 //  node-inspector
 // in other terminal
 describe('css transformation with rework', function() {
-  it('should add .bootstrap-admin to the right selectors in the right place', function() {
+  it('should add .nested-bootstrap to the right selectors in the right place', function() {
     var src = './test/fixtures/bootstrap.css';
     var target = './test/outputs/rework-bootstrap.css';
 
@@ -16,18 +16,18 @@ describe('css transformation with rework', function() {
 
     var css = fs.readFileSync(src, 'utf-8');
     css = rework(css)
-      .use(bootstrap('.bootstrap-admin'))
+      .use(bootstrap('.nested-bootstrap'))
       .toString();
     fs.writeFileSync(target, css, 'utf-8');
 
 
     var output = css;
-    output.should.match(/html \.bootstrap-admin/);
-    output.should.match(/body \.bootstrap-admin/);
-    output.should.not.match(/\.bootstrap-admin html/);
-    output.should.not.match(/\.bootstrap-admin body/);
-    output.should.not.match(/\.bootstrap-admin \.fade/);
-    output.should.not.match(/\.bootstrap-admin \.modal-backdrop/);
+    output.should.match(/html \.nested-bootstrap/);
+    output.should.match(/body \.nested-bootstrap/);
+    output.should.not.match(/\.nested-bootstrap html/);
+    output.should.not.match(/\.nested-bootstrap body/);
+    output.should.not.match(/\.nested-bootstrap \.fade/);
+    output.should.not.match(/\.nested-bootstrap \.modal-backdrop/);
   })
 
 })

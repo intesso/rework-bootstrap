@@ -36,10 +36,13 @@ var bootstrap = require('rework-bootstrap');
 
 var css = fs.readFileSync(src, 'utf-8');
 css = rework(css)
-  .use(bootstrap('.bootstrap-admin'))
+  .use(bootstrap('.nested-bootstrap'))
   .toString();
 fs.writeFileSync(target, css, 'utf-8');
 ```
+
+# tests
+`mocha`
 
 # license
 MIT
