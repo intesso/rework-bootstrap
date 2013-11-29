@@ -12,7 +12,7 @@ module.exports = function bootstrap(str) {
         if (selector.indexOf('body') === 0) {
           // replace
           return selector.replace('body', 'body ' + str);
-        } else if (selector.indexOf('.modal-backdrop') >= 0 || selector.indexOf('.fade') >= 0) {
+        } else if (selector.indexOf('.modal-backdrop') >= 0 || selector.indexOf('.fade') >= 0 || selector.indexOf('font-face') >= 0) {
           // ignore
           return selector;
         } else {
