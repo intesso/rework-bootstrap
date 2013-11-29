@@ -1,6 +1,6 @@
 {
   "name": "rework-bootstrap",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Recursively walk through all rules and keyframes",
   "keywords": [
     "css",
