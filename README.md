@@ -1,10 +1,12 @@
 # rework-bootstrap
 
-make bootstrap css non obtrusive
+make bootstrap css non obtrusive, or
+nest any "css" into the page, so that it does not break other styles
 
 # description
 - did you ever want to use twitter bootstrap, but not in every place?
 - or did you want to have two different bootstrap versions on the same page?
+- do you have a great library or style you want to integrate, but it interferes with your existing styles?
 
 here's one possible solution for you:
 
